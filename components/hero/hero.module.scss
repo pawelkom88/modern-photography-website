@@ -1,0 +1,66 @@
+.hero {
+  width: 100%;
+  height: 85vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 3rem 0;
+
+  &-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    filter: brightness(90%);
+    animation: scaleOnLoad 1.5s ease-in-out;
+    transform-origin: center bottom;
+    transform-style: preserve-3d;
+  }
+
+  &-heading {
+    font-family: "Roslindale", sans-serif;
+    font-size: clamp(2.5rem, 4vw, 7vw);
+    text-transform: uppercase;
+    animation: headingAnimation 1.5s ease-in-out backwards;
+    animation-delay: 0.3s;
+    line-height: 1;
+    transform-style: preserve-3d;
+    transform-origin: 0% 100%;
+  }
+}
+
+.heading-wrapper {
+  overflow: hidden;
+}
+
+.wrapper {
+  position: absolute;
+  text-align: center;
+}
+
+@keyframes scaleOnLoad {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 1) translateY(600px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1, 1, 1) translateY(0);
+  }
+}
+
+@keyframes headingAnimation {
+  0% {
+    transform: translate3d(0px, 110%, 0px) scale3d(0.5, 0.5, 1) rotateZ(18deg);
+    filter: blur(8px);
+  }
+
+  100% {
+    transform: translate3d(0px, 0%, 0px) scale(1, 1, 1) rotateZ(0);
+    filter: blur(0);
+  }
+}

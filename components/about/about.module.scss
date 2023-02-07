@@ -1,0 +1,41 @@
+.about {
+  max-width: 46rem;
+
+  margin: 10rem auto;
+
+  .heading {
+    font-size: clamp(2rem, 0.5rem + 4vw, 5rem);
+    font-family: "Roslindale", sans-serif;
+    padding: 0 0.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img {
+    display: inline;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    margin: 0 0.5rem;
+  }
+
+  &-paragraph {
+    font-weight: bold;
+    margin-top: 3rem;
+    text-align: center;
+  }
+}
+
+.first:hover {
+  transform: scale3d(2, 2, 1) rotateZ(-3deg);
+}
+
+.second:hover {
+  transform: scale3d(2, 2, 1) rotateZ(3deg);
+}
+
+.third:hover {
+  transform: scale3d(2, 2, 1) rotateZ(-3deg);
+}

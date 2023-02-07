@@ -1,0 +1,21 @@
+.nav {
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.flex-start {
+  justify-content: flex-start;
+  & * {
+    margin-right: .5rem;
+  }
+}
+
+.flex-end {
+  justify-content: flex-end;
+  & * {
+    margin-left: .5rem;
+  }
+}

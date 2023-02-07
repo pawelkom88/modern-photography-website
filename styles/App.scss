@@ -1,0 +1,92 @@
+@import "./styles/variables";
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+@font-face {
+  src: url("../assets/fonts/Roslindale-DisplayRegular-Testing.woff2") format("woff2"),
+    url("../assets/fonts/Roslindale-DisplayRegular-Testing.woff") format("woff");
+  font-family: "Roslindale";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url("../assets/fonts/Roslindale-DisplayCondensedLight-Testing.woff2") format("woff2"),
+    url("../assets/fonts/Roslindale-DisplayCondensedLight-Testing.woff") format("woff");
+  font-family: "Roslindale-Light";
+  font-style: normal;
+  font-weight: 300;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Rubik", sans-serif;
+  font-display: swap;
+  background-color: $bg-darkMode-clr;
+  color: $text-darkMode-clr;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* GENERAL STYLES */
+
+.container {
+  position: relative;
+  padding: 1rem 4vw;
+}
