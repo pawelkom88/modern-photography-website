@@ -1,11 +1,10 @@
-import React from "react";
 import useMatchMedia from "../../hooks/useMatchMedia";
 import Links from "./links/Links";
 import NavLink from "./link/NavLink";
 import classes from "./header.module.scss";
 import Link from "next/link";
 
-export default function Header({ isOpen, onOpen }) {
+export default function Header({ isOpen, onOpen, darkMode, toggleTheme }) {
   const { matches } = useMatchMedia("(max-width: 860px)");
 
   return (
@@ -29,16 +28,17 @@ export default function Header({ isOpen, onOpen }) {
             <>
               <NavLink href="/about">Instagram</NavLink>
               <NavLink href="/about">Email</NavLink>
-              <NavLink href="/about">Theme</NavLink>
             </>
           ) : (
             <>
-              <NavLink href="/about">Theme</NavLink>
               <NavLink type="button" onClick={onOpen}>
                 Menu
               </NavLink>
             </>
           )}
+          <NavLink type="button" onClick={toggleTheme}>
+            {darkMode ? "light mode" : "dark mode"}
+          </NavLink>
         </Links>
       </div>
     </header>
