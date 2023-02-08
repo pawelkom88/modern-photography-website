@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React from "react";
 import Image from "next/image";
 import { aboutImages } from "../../utils/utils.js";
 import classes from "./about.module.scss";
