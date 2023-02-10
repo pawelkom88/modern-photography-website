@@ -32,7 +32,7 @@ export const extrenalLinks = [
     href: "instagram.com",
     img: (
       <svg
-        style={{ width: "25px", heigh: "25px" }}
+        style={{ width: "28px", heigh: "28px" }}
         role="img"
         aria-labelledby="InstagramDesc Instagram"
         viewBox="0 0 30 30"
@@ -62,3 +62,15 @@ export const extrenalLinks = [
   //   ),
   // },
 ];
+
+export const linksLeft = [
+  { id: 1, href: "/about", content: "Offer" },
+  { id: 2, href: "/about", content: "Offer" },
+  { id: 3, href: "/about", content: "Offer" },
+];
+
+export const linksRightDesktop = [
+  { id: 1, href: "/about", content: "Instagram" },
+  { id: 2, href: "/about", content: "Contact" },
+];
+
