@@ -4,6 +4,7 @@ import Hero from "@components/hero/Hero";
 import Menu from "@components/menu/Menu";
 import About from "@components/about/About";
 import Texture from "@components/texture/Texture";
+import Collection from "@components/collection/Collection";
 import { ThemeContext } from "context/ThemeMode";
 
 export default function Home() {
@@ -12,16 +13,13 @@ export default function Home() {
 
   useEffect(() => {
     const body = document.querySelector("body");
-    const anchorTag = document.querySelector("a");
 
     if (!darkMode) {
       body.classList.add("light-mode");
       body.classList.remove("dark-mode");
-      anchorTag.classList.remove("dark-mode");
     } else {
       body.classList.remove("light-mode");
       body.classList.add("dark-mode");
-      anchorTag.classList.add("dark-mode");
     }
   }, [darkMode]);
 
@@ -38,9 +36,11 @@ export default function Home() {
         <Hero />
         <main>
           <About />
+          <Collection title="Title" date="date" darkMode={darkMode}/>
+          {/* <Collection title="Title" date="date" /> */}
         </main>
       </div>
-      <Menu isOpen={isOpen} onOpen={() => setIsOpen(false)} />
+      <Menu darkMode={darkMode} isOpen={isOpen} onOpen={() => setIsOpen(false)} />
     </>
   );
 }
