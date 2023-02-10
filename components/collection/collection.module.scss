@@ -1,0 +1,62 @@
+@import "@styles/variables";
+
+.collection {
+  max-width: 100%;
+  min-height: 100vh;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+  text-align: center;
+}
+
+.article {
+  max-width: 600px;
+  width: 50vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  margin-bottom: 4rem;
+}
+
+.heading {
+  font-family: "Roslindale-Light", sans-serif;
+  font-size: clamp(2rem, 0.5rem + 4vw, 5rem);
+}
+
+.img {
+  position: absolute;
+}
+
+.imgLeft {
+  // left: 30%;
+  // transform: rotate(-10deg);
+  transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateZ(0);
+  transform-style: preserve-3d;
+}
+
+.imgRight {
+  // right: 30%;
+  // transform: rotate(10deg);
+  transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateZ(0);
+  transform-style: preserve-3d;
+}
+
+.light {
+  color: $text-lightMode-clr;
+  border: 1px solid $text-lightMode-clr;
+
+  &:hover {
+    background-color: rgba($hover-clr-dark, 0.2);
+  }
+}

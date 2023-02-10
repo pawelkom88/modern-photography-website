@@ -10,9 +10,10 @@
   height: 4rem;
 
   z-index: 10;
-  
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  background-color: transparent;
   padding-top: 0.7rem;
   bottom: auto;
   animation: fadeIn 2.5s ease-in-out;
@@ -55,3 +56,13 @@
     opacity: 1;
   }
 }
+
+.light {
+  color: $text-lightMode-clr;
+  border: 1px solid $text-lightMode-clr;
+
+  &:hover {
+    background-color: rgba($hover-clr-dark, 0.2);
+  }
+}
+
