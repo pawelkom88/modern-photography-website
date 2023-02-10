@@ -23,13 +23,7 @@ export default function Hero() {
       </video>
       <div className={classes.wrapper}>
         <div className={classes["heading-wrapper"]}>
-          <h2 className={classes["hero-heading"]}>Giulia</h2>
-        </div>
-
-        <div className={classes["heading-wrapper"]}>
-          <h2 style={{ animationDelay: ".6s" }} className={classes["hero-heading"]}>
-            Gartner
-          </h2>
+          <h2 className={classes["hero-heading"]}>Giulia Gartner</h2>
         </div>
         <div className={classes["heading-wrapper"]}>
           <h2 style={{ animationDelay: ".9s" }} className={classes["hero-heading"]}>

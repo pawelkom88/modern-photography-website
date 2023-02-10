@@ -23,9 +23,9 @@
   }
 
   &-heading {
-    font-family: "Roslindale", sans-serif;
+    font-family: "Roslindale-Light", sans-serif;
     color: $text-darkMode-clr;
-    font-size: clamp(2.5rem, 4vw, 7vw);
+    font-size: clamp(2.5rem, 6vw, 9vw);
     text-transform: uppercase;
     animation: headingAnimation 1.5s ease-in-out backwards;
     animation-delay: 0.3s;
