@@ -29,12 +29,9 @@
   padding: 0;
 }
 
-html,
 body {
-  height: 100%;
-}
-
-body {
+  position: relative;
+  height: 100vh;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: "Rubik", sans-serif;
@@ -92,6 +89,7 @@ li {
 /* GENERAL STYLES */
 
 .container {
+  height: 100%;
   position: relative;
   padding: 1rem 4vw;
 }
@@ -106,4 +104,18 @@ li {
   background-color: $bg-darkMode-clr;
   color: $text-darkMode-clr;
   transition: all 0.5s ease-in-out;
+}
+
+.scrollbar-track {
+  background-color: transparent !important;
+}
+
+.scrollbar-track-y {
+  width: 10px !important;
+}
+
+.scrollbar-thumb {
+  height: 4rem !important;
+  background-color: $bg-darkMode-clr !important;
+  border-radius: 0 !important;
 }
