@@ -1,0 +1,14 @@
+@mixin light-styles {
+  color: $text-lightMode-clr;
+  border: 1px solid $text-lightMode-clr;
+
+  &:hover {
+    background-color: rgba($hover-clr-dark, 0.2);
+  }
+}
+
+@mixin flex($property1, $property2) {
+  display: flex;
+  justify-content: $property1;
+  align-items: $property2;
+}

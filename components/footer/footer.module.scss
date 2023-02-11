@@ -1,0 +1,50 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.footer {
+  min-height: 15rem;
+  @include flex(space-between, center);
+  flex-direction: column;
+
+  .contact {
+    max-width: 40rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: auto;
+
+    .email {
+      font-size: 3rem;
+
+      font-family: "Roslindale-Light";
+
+      background-color: #0c0c0c;
+
+      border: dashed 1px rgb($text-darkMode-clr, 0.2);
+      border-radius: 1rem;
+      padding: 1rem;
+      margin: 2rem 0 4rem 0;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(0.98);
+      }
+    }
+  }
+
+  .info {
+    width: 100%;
+    @include flex(space-between, center);
+    margin-bottom: 2rem;
+
+    .links {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+}
+
+.light {
+  color: $text-lightMode-clr;
+  background-color: $text-darkMode-clr;
+}

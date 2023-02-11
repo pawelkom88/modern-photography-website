@@ -1,7 +1,11 @@
 import mini1 from "../assets/images/mini1.jpg";
+import mini2 from "../assets/images/mini2.jpeg";
+import mini3 from "../assets/images/mini3.jpg";
 
 export const aboutImages = {
   mini1,
+  mini2,
+  mini3,
 };
 
 export const internalLinks = [
@@ -74,3 +78,8 @@ export const linksRightDesktop = [
   { id: 2, href: "/about", content: "Contact" },
 ];
 
+export const info = [
+  { id: 1, href: "insta", content: "Instagram" },
+  { id: 2, href: "face", content: "Facebook" },
+  { id: 3, href: "youtube", content: "youtube" },
+];

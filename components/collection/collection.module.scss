@@ -1,15 +1,14 @@
 @import "@styles/variables";
+@import "@styles/mixins";
 
 .collection {
   max-width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
 
   position: sticky;
   top: 0;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(center, center);
 
   margin: 0 auto;
   text-align: center;
@@ -17,12 +16,10 @@
 
 .article {
   max-width: 600px;
-  width: 50vh;
-  height: 100vh;
-  display: flex;
+  width: 100vh;
+  height: 50vh;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex(center, center);
 }
 
 .date {
@@ -53,10 +50,7 @@
 }
 
 .light {
-  color: $text-lightMode-clr;
-  border: 1px solid $text-lightMode-clr;
-
-  &:hover {
-    background-color: rgba($hover-clr-dark, 0.2);
+  .light {
+    @include light-styles;
   }
 }

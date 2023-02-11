@@ -1,12 +1,18 @@
 import useMatchMedia from "../../hooks/useMatchMedia";
+import Switcher from "@components/switcher/Switcher";
 import Links from "./links/Links";
 import NavLink from "./link/NavLink";
-import classes from "./header.module.scss";
+import React from "react";
+import { ThemeContext } from "context/ThemeMode";
 import Link from "next/link";
 import { linksLeft, linksRightDesktop } from "../../utils/utils";
+import classes from "./header.module.scss";
 
-export default function Header({ isOpen, onOpen, darkMode, toggleTheme }) {
+export default function Header({ onOpen }) {
   const { matches } = useMatchMedia("(max-width: 860px)");
+  const { toggleTheme } = React.useContext(ThemeContext);
+
+  // const themeMode = `${darkMode ? "" : classes.light}`;
 
   return (
     <header className={classes.header}>
@@ -14,7 +20,7 @@ export default function Header({ isOpen, onOpen, darkMode, toggleTheme }) {
         {!matches && (
           <Links styles="flex-start">
             {linksLeft?.map(({ id, href, content }) => (
-              <NavLink className={`${darkMode ? "" : classes.light}`} key={id} href={href}>
+              <NavLink key={id} href={href}>
                 {content}
               </NavLink>
             ))}
@@ -30,32 +36,25 @@ export default function Header({ isOpen, onOpen, darkMode, toggleTheme }) {
           {!matches ? (
             <>
               {linksRightDesktop?.map(({ id, href, content }) => (
-                <NavLink className={`${darkMode ? "" : classes.light}`} key={id} href={href}>
+                <NavLink key={id} href={href}>
                   {content}
                 </NavLink>
               ))}
             </>
           ) : (
             <>
-              <NavLink
-                className={`${darkMode ? "" : classes.light}`}
-                type="button"
-                onClick={onOpen}>
+              <NavLink type="button" onClick={onOpen}>
                 Menu
               </NavLink>
             </>
           )}
 
-          <NavLink
-            className={`${darkMode ? "" : classes.light}`}
-            type="button"
-            onClick={toggleTheme}>
+          <Switcher onChange={toggleTheme}/>
+          {/* <NavLink type="button" onClick={toggleTheme}>
             {darkMode ? "light mode" : "dark mode"}
-          </NavLink>
+          </NavLink> */}
         </Links>
       </div>
     </header>
   );
 }
-
-// {darkMode ? "light-mode" : "dark-mode"}
