@@ -1,4 +1,5 @@
 @import "@styles/variables";
+@import "@styles/mixins";
 
 .menu {
   position: fixed;
@@ -46,9 +47,7 @@
 
       .icons {
         width: 20%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(space-between, center);
       }
     }
   }
@@ -77,9 +76,7 @@
   right: 3rem;
   bottom: 3rem;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(center, center);
 
   width: 4rem;
   height: 3rem;
