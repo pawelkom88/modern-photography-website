@@ -13,13 +13,15 @@ export default function Footer() {
     <footer className={classes.footer}>
       <div className={classes.contact}>
         <span>GET IN TOUCH</span>
-        <h4 className={`${classes.email} ${themeMode}`}>
+        <h4
+          style={{ backgroundColor: `${darkMode ? "#0c0c0c" : ""}` }}
+          className={`${classes.email} ${themeMode}`}>
           <a href="mailto:contact@wp.pl">PHOTO@GIULIAGARTNER.COM</a>
         </h4>
       </div>
 
       <div className={classes.info}>
-        <div>giulia gartner 2022</div>
+        <small className={classes.copyright}>giulia gartner 2022</small>
         <div className={classes.links}>
           {info?.map(({ id, href, content }) => (
             <NavLink className={themeMode} key={id} href={href}>
@@ -27,7 +29,7 @@ export default function Footer() {
             </NavLink>
           ))}
         </div>
-        <div>developed by: Paw</div>
+        <small className={classes.copyright}>developed by: Paw</small>
       </div>
     </footer>
   );

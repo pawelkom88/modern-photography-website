@@ -1,11 +1,27 @@
 import mini1 from "../assets/images/mini1.jpg";
 import mini2 from "../assets/images/mini2.jpeg";
 import mini3 from "../assets/images/mini3.jpg";
+import shutter1 from "../assets/images/shutter-1.webp";
+import shutter2 from "../assets/images/shutter-2.webp";
+import case1 from "../assets/images/case-1.jpg";
+import case2 from "../assets/images/case-2.jpg";
+import case3 from "../assets/images/case-3.jpg";
+import case4 from "../assets/images/case-4.jpg";
+
+export const shutterOpen = shutter1;
+export const shutterClosed = shutter2;
 
 export const aboutImages = {
   mini1,
   mini2,
   mini3,
+};
+
+export const caseImages = {
+  case1,
+  case2,
+  case3,
+  case4,
 };
 
 export const internalLinks = [
@@ -83,3 +99,5 @@ export const info = [
   { id: 2, href: "face", content: "Facebook" },
   { id: 3, href: "youtube", content: "youtube" },
 ];
+
+export const collection = { mini1, mini2 };

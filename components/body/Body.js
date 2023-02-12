@@ -8,8 +8,7 @@ export default function Body({ children }) {
   const { darkMode } = React.useContext(ThemeContext);
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const bodyRef = useRef(null);
-  const scrollBarRef = useRef(null);
+  const bodyRef = useRef();
 
   useEffect(() => {
     if (!darkMode) {
