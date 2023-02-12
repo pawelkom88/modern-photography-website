@@ -27,13 +27,13 @@
   @include flex(flex-start, center);
   flex-direction: column;
 
-  // @media (max-width: 800px) {
-  //   height: 40vh;
-  // }
-}
-
-.date {
-  margin-bottom: 4rem;
+  .top {
+    width: 100%;
+    @include flex(center, center);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+  }
 }
 
 .heading {
@@ -43,7 +43,7 @@
 }
 
 .btn {
-  margin-top: 1rem;
+  margin: 2rem 0;
   display: inline-block;
 }
 
