@@ -13,11 +13,9 @@
     margin-bottom: auto;
 
     .email {
-      font-size: 3rem;
+      font-size: clamp(1.5rem, 0.5rem + 2vw, 2.875rem);
 
       font-family: "Roslindale-Light";
-
-      background-color: #0c0c0c;
 
       border: dashed 1px rgb($text-darkMode-clr, 0.2);
       border-radius: 1rem;
@@ -37,11 +35,26 @@
     @include flex(space-between, center);
     margin-bottom: 2rem;
 
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
     .links {
       display: flex;
       gap: 0.5rem;
+      margin-bottom: 1.5rem;
+
+      @media (max-width: 800px) {
+        order: -1;
+      }
     }
   }
+}
+
+.copyright {
+  font-size: clamp(0.625rem, 0.525rem + 0.4vw, 1rem);
+  text-transform: uppercase;
 }
 
 .light {
