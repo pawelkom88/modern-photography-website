@@ -10,9 +10,7 @@ import classes from "./header.module.scss";
 
 export default function Header({ onOpen }) {
   const { matches } = useMatchMedia("(max-width: 860px)");
-  const { toggleTheme } = React.useContext(ThemeContext);
-
-  // const themeMode = `${darkMode ? "" : classes.light}`;
+  const { darkMode, toggleTheme } = React.useContext(ThemeContext);
 
   return (
     <header className={classes.header}>
@@ -48,11 +46,7 @@ export default function Header({ onOpen }) {
               </NavLink>
             </>
           )}
-
-          <Switcher onChange={toggleTheme}/>
-          {/* <NavLink type="button" onClick={toggleTheme}>
-            {darkMode ? "light mode" : "dark mode"}
-          </NavLink> */}
+          <Switcher onChange={toggleTheme} value={darkMode} />
         </Links>
       </div>
     </header>

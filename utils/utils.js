@@ -1,6 +1,11 @@
 import mini1 from "../assets/images/mini1.jpg";
 import mini2 from "../assets/images/mini2.jpeg";
 import mini3 from "../assets/images/mini3.jpg";
+import shutter1 from "../assets/images/shutter-1.webp";
+import shutter2 from "../assets/images/shutter-2.webp";
+
+export const shutterOpen = shutter1;
+export const shutterClosed = shutter2;
 
 export const aboutImages = {
   mini1,
@@ -83,3 +88,5 @@ export const info = [
   { id: 2, href: "face", content: "Facebook" },
   { id: 3, href: "youtube", content: "youtube" },
 ];
+
+export const collection = { mini1, mini2 };

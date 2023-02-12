@@ -8,13 +8,16 @@ import Footer from "@components/footer/Footer";
 export default function Home() {
   return (
     <Body>
-      <Scroll />
+      {/* <Scroll /> */}
       <div className="container">
         <Hero />
-        <main>
-          <About />
-          <Collection title="Title" date="date" />
-        </main>
+      </div>
+      <main style={{ overflow: "hidden" }}>
+        <About />
+        <Collection title="Follow The Tracks" date="September 2019" />
+        <Collection title="Follow The Tracks" date="September 2019" />
+      </main>
+      <div className="container">
         <Footer />
       </div>
     </Body>
