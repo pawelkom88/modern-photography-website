@@ -16,10 +16,10 @@ export default function Switcher({ onChange, value }) {
       <label
         style={{ backgroundColor: `${value ? "#ebeef2" : "#fff"}` }}
         htmlFor="checkbox"
-        class={classes.label}>
+        className={classes.label}>
         <Image width={20} height={20} src={shutterClosed} alt="shutter_icon_closed" />
         <Image width={20} height={20} src={shutterOpen} alt="shutter_icon_open" />
-        <div style={{ backgroundColor: `${value ? "#131517" : "#1a4572"}` }} class={classes.ball} />
+        <div style={{ backgroundColor: `${value ? "#131517" : "#1a4572"}` }} className={classes.ball} />
       </label>
       <small className={classes.theme}>{value ? "dark" : "light"}</small>
     </div>
