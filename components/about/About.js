@@ -19,7 +19,7 @@ export default function About() {
         </Heading>
         <Heading size="big" text="began..." img={aboutImages.mini3}></Heading>
       </div>
-      <p ref={ref} className={classes["about-paragraph"]}>
+      <div ref={ref} className={classes["about-paragraph"]}>
         <ul className={classes.overflow}>
           <li className={`${inView ? classes.fadeIn : ""}`}>
             Giulia Gartner is an outdoor, travel, and commercial photographer, filmmaker, and
@@ -36,7 +36,7 @@ export default function About() {
             today.
           </li>
         </ul>
-      </p>
+      </div>
       <NavLink className={classes.btn} href="/">
         Read my story
       </NavLink>
