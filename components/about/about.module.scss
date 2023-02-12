@@ -1,10 +1,44 @@
 .about {
   max-width: 46rem;
-  margin: 13vh auto;
+  margin: 13vh auto 8vh;
+  text-align: center;
 
   &-paragraph {
     font-weight: bold;
     margin-top: 3rem;
+
+    @media (max-width: 800px) {
+      padding: 0 4vw;
+    }
+
+    .overflow {
+      overflow: hidden;
+
+      & li {
+        transform: translateY(1.5rem);
+        opacity: 0;
+        transition: all 1s ease-in-out;
+      }
+      .fadeIn {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      @for $i from 0 through 4 {
+        & li:nth-child(#{$i + 1}n) {
+          transition-delay: #{$i/10 + 0.1}s;
+        }
+      }
+    }
+  }
+
+  .btn {
+    display: inline-block;
     text-align: center;
+    margin: 3rem 0;
+
+    @media (max-width: 800px) {
+      margin: 3rem 0 8rem 0;
+    }
   }
 }
