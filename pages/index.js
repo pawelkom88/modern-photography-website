@@ -1,10 +1,14 @@
 // import Scroll from "@components/scroll/Scroll";
 import Hero from "@components/hero/Hero";
 import About from "@components/about/About";
-import Collection from "@components/collection/Collection";
 import Body from "@components/body/Body";
 import Footer from "@components/footer/Footer";
 import { caseImages } from "../utils/utils";
+import dynamic from "next/dynamic";
+
+const DynamicCollection = dynamic(() => import("@components/collection/Collection"), {
+  loading: () => "Loading...",
+});
 
 export default function Home() {
   return (
@@ -15,7 +19,7 @@ export default function Home() {
       </div>
       <main style={{ overflow: "hidden" }}>
         <About />
-        <Collection
+        <DynamicCollection
           title="Follow The Tracks"
           date="September 2019"
           place="Mongolia"
@@ -23,7 +27,7 @@ export default function Home() {
           img2={caseImages.case2}
           alt="Mongolia trip photos"
         />
-        <Collection
+        <DynamicCollection
           title="Cayuga Collection"
           date="July 2021"
           place="Costa Rica"
