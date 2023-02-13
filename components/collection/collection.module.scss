@@ -1,6 +1,8 @@
 @import "@styles/variables";
 @import "@styles/mixins";
 
+@import "@styles/breakpoints";
+
 .collection {
   height: 100vh;
 
@@ -13,7 +15,7 @@
   margin-top: 5rem;
   text-align: center;
 
-  @media (max-width: 800px) {
+  @media (max-width: $small) {
     height: 70vh;
   }
 }
