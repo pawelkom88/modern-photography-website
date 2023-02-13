@@ -37,9 +37,11 @@ export default function About() {
           </li>
         </ul>
       </div>
-      <NavLink className={classes.btn} href="/">
-        Read my story
-      </NavLink>
+      <ul>
+        <NavLink className={classes.btn} href="/">
+          Read my story
+        </NavLink>
+      </ul>
     </section>
   );
 }
