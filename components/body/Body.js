@@ -3,6 +3,7 @@ import Header from "@components/header/Header";
 import Menu from "@components/menu/Menu";
 import Texture from "@components/texture/Texture";
 import { ThemeContext } from "context/ThemeMode";
+import classes from './body.module.scss'
 
 export default function Body({ children }) {
   const { darkMode } = React.useContext(ThemeContext);
@@ -12,7 +13,6 @@ export default function Body({ children }) {
 
   useEffect(() => {
     if (!darkMode) {
-      // scrollBarRef.current.classList.add("light-mode");
       bodyRef.current.classList.add("light-mode");
       bodyRef.current.classList.remove("dark-mode");
     } else {
@@ -22,7 +22,7 @@ export default function Body({ children }) {
   }, [darkMode]);
 
   return (
-    <div ref={bodyRef}>
+    <div ref={bodyRef} className={classes.main}>
       <Texture />
       <Header isOpen={isOpen} onOpen={() => setIsOpen(!isOpen)} />
       {children}

@@ -15,9 +15,9 @@ export default function Collection({ title, date, place, img1, img2, alt }) {
   const ref2 = React.useRef();
   const triggerRef = React.useRef();
 
-  const rensponsivnessW = matches ? 350 : 550;
+  const rensponsivnessW = matches ? 299 : 558;
 
-  const rensponsivnessH = matches ? 500 : 700;
+  const rensponsivnessH = matches ? 531 : 711;
 
   React.useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -25,32 +25,36 @@ export default function Collection({ title, date, place, img1, img2, alt }) {
     const el1 = ref1.current;
     const el2 = ref2.current;
 
-    gsap.fromTo(
-      el1,
-      { x: -10, rotate: -5 },
-      {
-        x: matches ? -320 : -800,
-        scrollTrigger: {
-          trigger: triggerEl,
-          start: "top 50%",
-          end: "+=100 50%",
-          scrub: 3,
-        },
-      }
-    );
-    gsap.fromTo(
-      el2,
-      { x: 10, rotate: 5 },
-      {
-        x: matches ? 320 : 800,
-        scrollTrigger: {
-          trigger: triggerEl,
-          start: "top 50%",
-          end: "+=100 50%",
-          scrub: 3,
-        },
-      }
-    );
+    let ctx = gsap.context(() => {
+      gsap.fromTo(
+        el1,
+        { x: -10, rotate: -5 },
+        {
+          x: matches ? -320 : -800,
+          scrollTrigger: {
+            trigger: triggerEl,
+            start: "top 50%",
+            end: "+=100",
+            scrub: 3,
+          },
+        }
+      );
+      gsap.fromTo(
+        el2,
+        { x: 10, rotate: 5 },
+        {
+          x: matches ? 320 : 800,
+          scrollTrigger: {
+            trigger: triggerEl,
+            start: "top 50%",
+            end: "+=100",
+            scrub: 3,
+          },
+        }
+      );
+    }, triggerRef);
+
+    return () => ctx.revert();
   }, [matches]);
 
   return (

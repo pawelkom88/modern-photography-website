@@ -74,7 +74,7 @@
 .btn {
   position: fixed;
   right: 3rem;
-  bottom: 3rem;
+  bottom: 5rem;
 
   @include flex(center, center);
 
@@ -83,7 +83,6 @@
 
   border-radius: 2rem;
   border: none;
-  // background-color: $bg-lightMode-clr;
   will-change: transform;
   cursor: pointer;
 

@@ -17,7 +17,6 @@
   backdrop-filter: blur(16px);
   background-color: transparent;
   padding-top: 0.7rem;
-  animation: fadeIn 2.5s ease-in-out;
 }
 
 .wrapper {
@@ -43,16 +42,6 @@
 
   &:hover {
     color: $text-darkMode-clr;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }
 

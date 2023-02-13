@@ -1,5 +1,6 @@
 @import "@styles/variables";
 @import "@styles/mixins";
+@import "@styles/breakpoints";
 
 .link {
   font-size: 0.7rem;
@@ -17,7 +18,7 @@
     background-color: rgba($hover-clr, 0.2);
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: $small) {
     margin-left: 0;
   }
 }

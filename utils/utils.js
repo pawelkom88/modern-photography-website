@@ -84,8 +84,8 @@ export const extrenalLinks = [
 ];
 
 export const linksLeft = [
-  { id: 1, href: "/about", content: "Offer" },
-  { id: 2, href: "/about", content: "Offer" },
+  { id: 1, href: "/about", content: "About" },
+  { id: 2, href: "/", content: "Offer" },
   { id: 3, href: "/about", content: "Offer" },
 ];
 
