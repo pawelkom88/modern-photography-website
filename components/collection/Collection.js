@@ -15,9 +15,9 @@ export default function Collection({ title, date, place, img1, img2, alt }) {
   const ref2 = React.useRef();
   const triggerRef = React.useRef();
 
-  const rensponsivnessW = matches ? 299 : 558;
+  const rensponsivnessW = matches ? 300 : 640;
 
-  const rensponsivnessH = matches ? 531 : 711;
+  const rensponsivnessH = matches ? 375 : 800;
 
   React.useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
